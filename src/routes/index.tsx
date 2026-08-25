@@ -1,24 +1,57 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Header } from "@/components/site/Header";
+import { PromoBanner } from "@/components/site/PromoBanner";
+import { Hero } from "@/components/site/Hero";
+import { Estates } from "@/components/site/Estates";
+import { Why } from "@/components/site/Why";
+import { Plans } from "@/components/site/Plans";
+import { Proof } from "@/components/site/Proof";
+import { Faq } from "@/components/site/Faq";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { FloatingActions } from "@/components/site/FloatingActions";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Dala Real Estate | Buy Land in Awka, Asaba & Lagos" },
+      {
+        name: "description",
+        content:
+          "Own genuine, verified land from Dala Real Estate in Awka, Asaba and Lagos. Flexible payment plans from ₦3M. Instant allocation and secure documentation.",
+      },
+      { property: "og:title", content: "Dala Real Estate | Buy Land in Awka, Asaba & Lagos" },
+      {
+        property: "og:description",
+        content:
+          "Genuine properties, flexible payment plans and stressless ownership across Awka, Asaba and Lagos.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://stellar-clientele.lovable.app/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "https://stellar-clientele.lovable.app/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <PromoBanner />
+        <Hero />
+        <Estates />
+        <Why />
+        <Plans />
+        <Proof />
+        <Faq />
+        <Contact />
+      </main>
+      <Footer />
+      <FloatingActions />
+    </>
   );
 }
