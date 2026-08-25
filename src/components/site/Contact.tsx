@@ -3,7 +3,7 @@ import { OFFICE, PHONES, estates, waLink } from "@/data/dala";
 
 export function Contact() {
   const [name, setName] = useState("");
-  const [estate, setEstate] = useState(estates[0].id);
+  const [estate, setEstate] = useState(estates[0]?.id ?? "");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
 
