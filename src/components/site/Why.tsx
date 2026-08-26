@@ -1,7 +1,3 @@
-import img20 from "@/assets/dala-20.webp.asset.json";
-import img16 from "@/assets/dala-16.webp.asset.json";
-import img11 from "@/assets/dala-11.webp.asset.json";
-
 const reasons = [
   {
     title: "Genuine properties",
@@ -48,19 +44,19 @@ export function Why() {
 
         <div className="grid grid-cols-2 gap-4">
           <img
-            src={img16.url}
+            src="/images/dala-16.webp"
             alt="Dala Real Estate agent at the Asaba Phase 3 estate signboard"
             loading="lazy"
             className="col-span-2 h-56 w-full rounded-2xl object-cover shadow-elev"
           />
           <img
-            src={img11.url}
+            src="/images/dala-11.webp"
             alt="Graded land at a Dala estate development site"
             loading="lazy"
             className="h-44 w-full rounded-2xl object-cover"
           />
           <img
-            src={img20.url}
+            src="/images/dala-20.webp"
             alt="The Dala Real Estate team at the Asaba office"
             loading="lazy"
             className="h-44 w-full rounded-2xl object-cover"
