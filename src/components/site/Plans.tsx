@@ -1,4 +1,3 @@
-import img5 from "@/assets/dala-5.webp.asset.json";
 import { waLink } from "@/data/dala";
 
 const steps = [
@@ -64,7 +63,7 @@ export function Plans() {
         </div>
 
         <img
-          src={img5.url}
+          src="/images/dala-5.webp"
           alt="Dala Home Estate Awka Phase 1 allocation month promo flyer"
           loading="lazy"
           className="mx-auto w-full max-w-sm rounded-2xl shadow-elev"

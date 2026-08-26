@@ -1,7 +1,3 @@
-import img31 from "@/assets/dala-31.webp.asset.json";
-import img33 from "@/assets/dala-33.webp.asset.json";
-import img9 from "@/assets/dala-9.webp.asset.json";
-
 const testimonials = [
   {
     quote:
@@ -34,19 +30,19 @@ export function Proof() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           <img
-            src={img31.url}
+            src="/images/dala-31.webp"
             alt="Dala Real Estate team at an allocation event"
             loading="lazy"
             className="h-64 w-full rounded-2xl object-cover"
           />
           <img
-            src={img33.url}
+            src="/images/dala-33.webp"
             alt="Dala Real Estate management addressing clients at an event"
             loading="lazy"
             className="h-64 w-full rounded-2xl object-cover"
           />
           <img
-            src={img9.url}
+            src="/images/dala-9.webp"
             alt="Dala Estate price list across Lagos, Awka and Asaba"
             loading="lazy"
             className="h-64 w-full rounded-2xl object-contain bg-card p-2"
