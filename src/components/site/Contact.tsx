@@ -71,7 +71,7 @@ ${message}`;
               onChange={(e) => setName(e.target.value)}
               required
               className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
-              placeholder="e.g. Praise Ikejiofor"
+              placeholder="e.g. David Dura"
             />
           </div>
 
