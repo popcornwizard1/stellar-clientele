@@ -59,7 +59,10 @@ ${message}`;
           className="surface-card space-y-4 p-6 sm:p-8"
         >
           <div>
-            <label htmlFor="name" className="text-xs font-extrabold uppercase tracking-wider">
+            <label
+              htmlFor="name"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Your name
             </label>
             <input
@@ -67,20 +70,23 @@ ${message}`;
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. Praise Ikejiofor"
             />
           </div>
 
           <div>
-            <label htmlFor="estate" className="text-xs font-extrabold uppercase tracking-wider">
+            <label
+              htmlFor="estate"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Estate of interest
             </label>
             <select
               id="estate"
               value={estate}
               onChange={(e) => setEstate(e.target.value)}
-              className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy outline-none focus:ring-2 focus:ring-ring"
             >
               {estates.map((e) => (
                 <option key={e.id} value={e.id}>
@@ -91,20 +97,26 @@ ${message}`;
           </div>
 
           <div>
-            <label htmlFor="budget" className="text-xs font-extrabold uppercase tracking-wider">
+            <label
+              htmlFor="budget"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Budget / payment style
             </label>
             <input
               id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. ₦1M deposit, 4-month plan"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="text-xs font-extrabold uppercase tracking-wider">
+            <label
+              htmlFor="message"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Anything else?
             </label>
             <textarea
@@ -112,7 +124,7 @@ ${message}`;
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={3}
-              className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="I'd like an inspection this weekend."
             />
           </div>
@@ -120,7 +132,7 @@ ${message}`;
           <button type="submit" className="btn-base btn-gold btn-gold-hover w-full">
             Send on WhatsApp
           </button>
-          <p className="text-center text-xs text-muted-foreground">
+          <p className="text-center text-xs text-navy/70">
             Opens WhatsApp with your details prefilled. No spam, ever.
           </p>
         </form>
