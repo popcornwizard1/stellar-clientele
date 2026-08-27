@@ -59,6 +59,27 @@ export function Proof() {
             </figure>
           ))}
         </div>
+
+        <a
+          href="https://www.facebook.com/share/v/1HHAfnpFEP/"
+          target="_blank"
+          rel="noreferrer"
+          className="surface-card mt-10 flex flex-col items-center gap-4 p-8 text-center transition-transform hover:scale-[1.01] sm:flex-row sm:text-left"
+        >
+          <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-navy text-navy-foreground shadow-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
+          <div>
+            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-gold">Customer moments</p>
+            <p className="mt-1 text-lg">Watch real Dala interactions on Facebook</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              See how we treat every client like family — from inspection to allocation.
+            </p>
+          </div>
+          <span className="btn-base btn-gold btn-gold-hover ml-auto shrink-0 text-xs">Watch video</span>
+        </a>
       </div>
     </section>
   );
