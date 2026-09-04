@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { OFFICE, PHONES, estates, waLink } from "@/data/dala";
+import { Facebook, Instagram } from "lucide-react";
+import { FACEBOOK, INSTAGRAM, OFFICE, PHONES, TIKTOK, estates, waLink } from "@/data/dala";
 
 export function Contact() {
   const [name, setName] = useState("");
