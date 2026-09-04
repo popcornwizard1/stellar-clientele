@@ -1,5 +1,9 @@
 export const PHONES = ["09161621041", "07014664302", "09161711613"] as const;
-export const WHATSAPP = "2349161621041";
+export const MANAGER_WHATSAPP = "2347014664302";
+export const COMPANY_WHATSAPPS = ["2349161711613", "2347070259903"] as const;
+export const SALES_WHATSAPPS = [MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS] as const;
+export const FEEDBACK_WHATSAPP = COMPANY_WHATSAPPS[0];
+export const WHATSAPP = MANAGER_WHATSAPP;
 export const OFFICE =
   "Suite B1/51 Mechanic Village, Opp. Northwest Filling Station, Asaba, Delta State";
 export const RC = "RC 1545121";
@@ -9,7 +13,21 @@ export const FACEBOOK = "https://www.facebook.com/profile.php?id=61561503285621"
 export const TIKTOK = "https://vm.tiktok.com/ZS9Bof2FGUrKx-Sw96u/";
 
 export const waLink = (message: string) =>
-  `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
+  waLinkForNumber(WHATSAPP, message);
+
+export const waLinkForNumber = (phone: string, message: string) =>
+  `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+export const salesWaLinks = (message: string) =>
+  SALES_WHATSAPPS.map((phone) => waLinkForNumber(phone, message));
+
+export const openSalesWhatsApps = (message: string) => {
+  if (typeof window === "undefined") return;
+
+  salesWaLinks(message).forEach((url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+};
 
 export type Estate = {
   id: string;
