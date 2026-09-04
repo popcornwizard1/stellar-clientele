@@ -4,6 +4,10 @@ export const OFFICE =
   "Suite B1/51 Mechanic Village, Opp. Northwest Filling Station, Asaba, Delta State";
 export const RC = "RC 1545121";
 
+export const INSTAGRAM = "https://www.instagram.com/dala_realestate/";
+export const FACEBOOK = "https://www.facebook.com/profile.php?id=61561503285621";
+export const TIKTOK = "https://vm.tiktok.com/ZS9Bof2FGUrKx-Sw96u/";
+
 export const waLink = (message: string) =>
   `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
 
