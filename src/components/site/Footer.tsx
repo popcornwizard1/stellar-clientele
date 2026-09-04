@@ -1,4 +1,5 @@
-import { PHONES, RC, WHATSAPP, waLink } from "@/data/dala";
+import { Facebook, Instagram } from "lucide-react";
+import { FACEBOOK, INSTAGRAM, PHONES, RC, TIKTOK, WHATSAPP, waLink } from "@/data/dala";
 
 export function Footer() {
   const year = new Date().getFullYear();
