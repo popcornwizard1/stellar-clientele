@@ -64,7 +64,10 @@ export function Feedback() {
           className="surface-card space-y-4 p-6 sm:p-8"
         >
           <div>
-            <label htmlFor="feedback-name" className="text-xs font-extrabold uppercase tracking-wider text-navy">
+            <label
+              htmlFor="feedback-name"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Your name
             </label>
             <input
@@ -78,7 +81,10 @@ export function Feedback() {
           </div>
 
           <div>
-            <label htmlFor="feedback-phone" className="text-xs font-extrabold uppercase tracking-wider text-navy">
+            <label
+              htmlFor="feedback-phone"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Phone number
             </label>
             <input
@@ -93,7 +99,10 @@ export function Feedback() {
           </div>
 
           <div>
-            <label htmlFor="feedback-type" className="text-xs font-extrabold uppercase tracking-wider text-navy">
+            <label
+              htmlFor="feedback-type"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Message type
             </label>
             <select
@@ -109,7 +118,10 @@ export function Feedback() {
           </div>
 
           <div>
-            <label htmlFor="feedback-message" className="text-xs font-extrabold uppercase tracking-wider text-navy">
+            <label
+              htmlFor="feedback-message"
+              className="text-xs font-extrabold uppercase tracking-wider text-navy"
+            >
               Your message
             </label>
             <textarea
@@ -127,7 +139,9 @@ export function Feedback() {
           <button type="submit" className="btn-base btn-gold btn-gold-hover w-full">
             Send to the company team
           </button>
-          <p className="text-center text-xs text-navy/70">Opens WhatsApp on the company feedback line.</p>
+          <p className="text-center text-xs text-navy/70">
+            Opens WhatsApp on the company feedback line.
+          </p>
         </form>
       </div>
     </section>

@@ -1,5 +1,16 @@
 import { Facebook, Instagram } from "lucide-react";
-import { COMPANY_PHONES, FACEBOOK, INSTAGRAM, MANAGER_PHONE, PHONES, RC, TIKTOK, WHATSAPP, openSalesWhatsApps, waLink } from "@/data/dala";
+import {
+  COMPANY_PHONES,
+  FACEBOOK,
+  INSTAGRAM,
+  MANAGER_PHONE,
+  PHONES,
+  RC,
+  TIKTOK,
+  WHATSAPP,
+  openSalesWhatsApps,
+  waLink,
+} from "@/data/dala";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -20,8 +31,8 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-navy-foreground/75">
-            Genuine, verified estates across Awka, Asaba and Lagos. Flexible payment plans,
-            instant allocation and documentation you can trust.
+            Genuine, verified estates across Awka, Asaba and Lagos. Flexible payment plans, instant
+            allocation and documentation you can trust.
           </p>
           <p className="mt-4 text-xs font-bold text-navy-foreground/60">{RC}</p>
         </div>

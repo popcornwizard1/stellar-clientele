@@ -14,8 +14,7 @@ export const INSTAGRAM = "https://www.instagram.com/dala_realestate/";
 export const FACEBOOK = "https://www.facebook.com/profile.php?id=61561503285621";
 export const TIKTOK = "https://vm.tiktok.com/ZS9Bof2FGUrKx-Sw96u/";
 
-export const waLink = (message: string) =>
-  waLinkForNumber(WHATSAPP, message);
+export const waLink = (message: string) => waLinkForNumber(WHATSAPP, message);
 
 export const waLinkForNumber = (phone: string, message: string) =>
   `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
