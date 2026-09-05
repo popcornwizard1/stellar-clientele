@@ -33,7 +33,7 @@ export function Contact() {
   return (
     <section id="contact" className="navy-panel py-20 sm:py-24">
       <div className="container-x grid gap-12 lg:grid-cols-2">
-        <div className="text-navy-foreground">
+        <div className="min-w-0 text-navy-foreground">
           <span className="eyebrow">Talk to us</span>
           <h2 className="mt-3 text-3xl sm:text-4xl">
             Book a free inspection or request the full price list.
@@ -46,13 +46,13 @@ export function Contact() {
           <div className="mt-10 space-y-4 text-sm">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">Call</p>
-              <p className="mt-1 space-x-3">
+              <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
                 {PHONES.map((p) => (
                   <a key={p} href={`tel:${p}`} className="font-bold hover:text-gold">
                     {p}
                   </a>
                 ))}
-              </p>
+              </div>
             </div>
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">Office</p>
@@ -113,7 +113,7 @@ export function Contact() {
             const text = `Hello Dala Real Estate.\nName: ${result.data.name}\nInterested in: ${chosen ? `${chosen.name} ${chosen.phase} (${chosen.price})` : "-"}\nBudget: ${result.data.budget || "-"}\n${result.data.message || "-"}`;
             openSalesWhatsApps(text);
           }}
-          className="surface-card space-y-4 p-6 sm:p-8"
+          className="surface-card min-w-0 space-y-4 p-5 sm:p-8"
         >
           <div>
             <label
@@ -128,7 +128,7 @@ export function Contact() {
               onChange={(e) => setName(e.target.value)}
               required
               maxLength={100}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. David Dura"
             />
           </div>
@@ -144,11 +144,11 @@ export function Contact() {
               id="estate"
               value={estate}
               onChange={(e) => setEstate(e.target.value)}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full max-w-full truncate rounded-lg border border-input bg-card px-4 py-3 text-base text-navy outline-none focus:ring-2 focus:ring-ring"
             >
               {estates.map((e) => (
                 <option key={e.id} value={e.id}>
-                  {e.name} — {e.phase} ({e.price})
+                  {e.name} - {e.phase} ({e.price})
                 </option>
               ))}
             </select>
@@ -166,7 +166,7 @@ export function Contact() {
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
               maxLength={120}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. ₦1M deposit, 4-month plan"
             />
           </div>
@@ -184,7 +184,7 @@ export function Contact() {
               onChange={(e) => setMessage(e.target.value)}
               rows={3}
               maxLength={1000}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="I'd like an inspection this weekend."
             />
           </div>

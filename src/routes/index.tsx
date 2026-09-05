@@ -29,10 +29,10 @@ export const Route = createFileRoute("/")({
           "Genuine properties, flexible payment plans and stressless ownership across Awka, Asaba and Lagos.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://stellar-clientele.lovable.app/" },
+      { property: "og:url", content: "https://dalaestate.com/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://stellar-clientele.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://dalaestate.com/" }],
   }),
   component: Index,
 });

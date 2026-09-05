@@ -32,7 +32,7 @@ export function Feedback() {
   return (
     <section id="feedback" className="py-20 sm:py-24">
       <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1fr] lg:items-start">
-        <div>
+        <div className="min-w-0">
           <span className="eyebrow">We listen</span>
           <h2 className="mt-3 text-3xl sm:text-4xl">Customer complaints and feedback</h2>
           <p className="mt-4 max-w-md text-muted-foreground">
@@ -61,7 +61,7 @@ export function Feedback() {
             const text = `Hello Dala Real Estate.\nType: ${result.data.type}\nName: ${result.data.name}\nPhone: ${result.data.phone}\nMessage: ${result.data.message}`;
             window.open(waLinkForNumber(FEEDBACK_WHATSAPP, text), "_blank", "noopener,noreferrer");
           }}
-          className="surface-card space-y-4 p-6 sm:p-8"
+          className="surface-card min-w-0 space-y-4 p-5 sm:p-8"
         >
           <div>
             <label
@@ -75,7 +75,7 @@ export function Feedback() {
               value={name}
               onChange={(event) => setName(event.target.value)}
               maxLength={100}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. David Dura"
             />
           </div>
@@ -93,7 +93,7 @@ export function Feedback() {
               onChange={(event) => setPhone(event.target.value)}
               inputMode="tel"
               maxLength={20}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="e.g. 0701 466 4302"
             />
           </div>
@@ -109,7 +109,7 @@ export function Feedback() {
               id="feedback-type"
               value={type}
               onChange={(event) => setType(event.target.value as typeof type)}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy outline-none focus:ring-2 focus:ring-ring"
             >
               <option>Complaint</option>
               <option>Feedback</option>
@@ -130,7 +130,7 @@ export function Feedback() {
               onChange={(event) => setMessage(event.target.value)}
               maxLength={1000}
               rows={5}
-              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
+              className="mt-2 w-full rounded-lg border border-input bg-card px-4 py-3 text-base text-navy placeholder:text-navy/55 outline-none focus:ring-2 focus:ring-ring"
               placeholder="Tell us how we can help."
             />
           </div>
