@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-estate.jpg";
-import { waLink } from "@/data/dala";
+import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const stats = [
   { value: "7", label: "Estates across 3 states" },
@@ -29,14 +29,19 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
             Dala Real Estate develops genuine, verified estates with clean documentation and
-            flexible payment plans. Plots from{" "}
-            <strong className="text-gold">₦3 million</strong>, allocation the moment you complete
-            payment.
+            flexible payment plans. Plots from <strong className="text-gold">₦3 million</strong>,
+            allocation the moment you complete payment.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={waLink("I saw your website. Please send me the Dala estate price list.")}
+              onClick={(event) => {
+                event.preventDefault();
+                openSalesWhatsApps(
+                  "I saw your website. Please send me the Dala estate price list.",
+                );
+              }}
               target="_blank"
               rel="noreferrer"
               className="btn-base btn-gold btn-gold-hover"

@@ -1,4 +1,4 @@
-import { PHONES, waLink } from "@/data/dala";
+import { MANAGER_PHONE, openSalesWhatsApps, waLink } from "@/data/dala";
 
 const nav = [
   { label: "Estates", href: "#estates" },
@@ -6,6 +6,7 @@ const nav = [
   { label: "Payment Plans", href: "#plans" },
   { label: "Proof", href: "#proof" },
   { label: "Contact", href: "#contact" },
+  { label: "Feedback", href: "#feedback" },
 ];
 
 export function Header() {
@@ -39,13 +40,17 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <a
-              href={`tel:${PHONES[0]}`}
+              href={`tel:${MANAGER_PHONE}`}
               className="hidden text-sm font-bold text-navy-foreground/85 hover:text-gold sm:block"
             >
-              {PHONES[0]}
+              {MANAGER_PHONE}
             </a>
             <a
               href={waLink("Hello Dala Real Estate, I want to buy a plot.")}
+              onClick={(event) => {
+                event.preventDefault();
+                openSalesWhatsApps("Hello Dala Real Estate, I want to buy a plot.");
+              }}
               target="_blank"
               rel="noreferrer"
               className="btn-base btn-gold btn-gold-hover px-4 py-2 text-xs"

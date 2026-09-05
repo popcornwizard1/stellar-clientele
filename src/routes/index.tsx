@@ -9,6 +9,7 @@ import { Plans } from "@/components/site/Plans";
 import { Proof } from "@/components/site/Proof";
 import { Faq } from "@/components/site/Faq";
 import { Contact } from "@/components/site/Contact";
+import { Feedback } from "@/components/site/Feedback";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
 
@@ -49,6 +50,7 @@ function Index() {
         <Proof />
         <Faq />
         <Contact />
+        <Feedback />
       </main>
       <Footer />
       <FloatingActions />

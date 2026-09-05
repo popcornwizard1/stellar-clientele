@@ -1,10 +1,26 @@
-import { waLink } from "@/data/dala";
+import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const steps = [
-  { n: "01", t: "Pick your estate", d: "Choose Awka, Asaba or Lagos and the phase that fits your budget." },
-  { n: "02", t: "Inspect the land", d: "Book a free site inspection — physically or by video walkthrough." },
-  { n: "03", t: "Pay & spread", d: "Deposit to start, then spread the balance over up to 4 months." },
-  { n: "04", t: "Get allocated", d: "Receive your documents and physical allocation of your plot." },
+  {
+    n: "01",
+    t: "Pick your estate",
+    d: "Choose Awka, Asaba or Lagos and the phase that fits your budget.",
+  },
+  {
+    n: "02",
+    t: "Inspect the land",
+    d: "Book a free site inspection — physically or by video walkthrough.",
+  },
+  {
+    n: "03",
+    t: "Pay & spread",
+    d: "Deposit to start, then spread the balance over up to 4 months.",
+  },
+  {
+    n: "04",
+    t: "Get allocated",
+    d: "Receive your documents and physical allocation of your plot.",
+  },
 ];
 
 export function Plans() {
@@ -13,9 +29,7 @@ export function Plans() {
       <div className="container-x grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-center">
         <div>
           <span className="eyebrow">Payment plan</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl">
-            ₦1M today puts your name on an Awka plot.
-          </h2>
+          <h2 className="mt-3 text-3xl sm:text-4xl">₦1M today puts your name on an Awka plot.</h2>
           <p className="mt-4 max-w-lg text-muted-foreground">
             The Awka Phase 1 allocation promo runs a simple 4-month instalment plan — no hidden
             charges, no interest games.
@@ -54,6 +68,10 @@ export function Plans() {
 
           <a
             href={waLink("I want to start the 4-month payment plan for Awka Phase 1.")}
+            onClick={(event) => {
+              event.preventDefault();
+              openSalesWhatsApps("I want to start the 4-month payment plan for Awka Phase 1.");
+            }}
             target="_blank"
             rel="noreferrer"
             className="btn-base btn-gold btn-gold-hover mt-10"

@@ -1,8 +1,10 @@
-export const PHONES = ["09161621041", "07014664302", "09161711613"] as const;
+export const MANAGER_PHONE = "07014664302";
+export const COMPANY_PHONES = ["09161711613", "07070259903"] as const;
+export const PHONES = [MANAGER_PHONE, ...COMPANY_PHONES, "09161621041"] as const;
 export const MANAGER_WHATSAPP = "2347014664302";
 export const COMPANY_WHATSAPPS = ["2349161711613", "2347070259903"] as const;
 export const SALES_WHATSAPPS = [MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS] as const;
-export const FEEDBACK_WHATSAPP = COMPANY_WHATSAPPS[0];
+export const FEEDBACK_WHATSAPP = "2349161711613";
 export const WHATSAPP = MANAGER_WHATSAPP;
 export const OFFICE =
   "Suite B1/51 Mechanic Village, Opp. Northwest Filling Station, Asaba, Delta State";
@@ -12,8 +14,7 @@ export const INSTAGRAM = "https://www.instagram.com/dala_realestate/";
 export const FACEBOOK = "https://www.facebook.com/profile.php?id=61561503285621";
 export const TIKTOK = "https://vm.tiktok.com/ZS9Bof2FGUrKx-Sw96u/";
 
-export const waLink = (message: string) =>
-  waLinkForNumber(WHATSAPP, message);
+export const waLink = (message: string) => waLinkForNumber(WHATSAPP, message);
 
 export const waLinkForNumber = (phone: string, message: string) =>
   `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;

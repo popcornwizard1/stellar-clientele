@@ -1,4 +1,4 @@
-import { estates, waLink } from "@/data/dala";
+import { estates, openSalesWhatsApps, waLink } from "@/data/dala";
 
 export function Estates() {
   return (
@@ -8,8 +8,8 @@ export function Estates() {
           <span className="eyebrow">Available now</span>
           <h2 className="mt-3 text-3xl sm:text-4xl">Which Dala Estate will you call home?</h2>
           <p className="mt-4 text-muted-foreground">
-            Every plot below is dry, surveyed and ready for allocation. Prices are per plot and
-            can be spread across an instalment plan.
+            Every plot below is dry, surveyed and ready for allocation. Prices are per plot and can
+            be spread across an instalment plan.
           </p>
         </div>
 
@@ -50,6 +50,10 @@ export function Estates() {
 
               <a
                 href={waLink(`I'm interested in ${e.name} ${e.phase} at ${e.price}.`)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  openSalesWhatsApps(`I'm interested in ${e.name} ${e.phase} at ${e.price}.`);
+                }}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-base btn-navy mt-6 w-full py-3 text-sm hover:opacity-90"
