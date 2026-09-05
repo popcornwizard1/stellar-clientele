@@ -6,6 +6,7 @@ const nav = [
   { label: "Payment Plans", href: "#plans" },
   { label: "Proof", href: "#proof" },
   { label: "Contact", href: "#contact" },
+  { label: "Feedback", href: "#feedback" },
 ];
 
 export function Header() {
