@@ -1,4 +1,4 @@
-import { waLink } from "@/data/dala";
+import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const steps = [
   { n: "01", t: "Pick your estate", d: "Choose Awka, Asaba or Lagos and the phase that fits your budget." },
@@ -54,6 +54,10 @@ export function Plans() {
 
           <a
             href={waLink("I want to start the 4-month payment plan for Awka Phase 1.")}
+            onClick={(event) => {
+              event.preventDefault();
+              openSalesWhatsApps("I want to start the 4-month payment plan for Awka Phase 1.");
+            }}
             target="_blank"
             rel="noreferrer"
             className="btn-base btn-gold btn-gold-hover mt-10"

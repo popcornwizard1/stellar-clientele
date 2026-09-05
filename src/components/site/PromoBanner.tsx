@@ -1,4 +1,4 @@
-import { waLink } from "@/data/dala";
+import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 export function PromoBanner() {
   return (
@@ -10,6 +10,10 @@ export function PromoBanner() {
         </p>
         <a
           href={waLink("I want to claim the Awka Phase 1 promo at ₦4M.")}
+          onClick={(event) => {
+            event.preventDefault();
+            openSalesWhatsApps("I want to claim the Awka Phase 1 promo at ₦4M.");
+          }}
           target="_blank"
           rel="noreferrer"
           className="text-sm font-extrabold underline underline-offset-4"

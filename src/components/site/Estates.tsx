@@ -1,4 +1,4 @@
-import { estates, waLink } from "@/data/dala";
+import { estates, openSalesWhatsApps, waLink } from "@/data/dala";
 
 export function Estates() {
   return (
@@ -50,6 +50,10 @@ export function Estates() {
 
               <a
                 href={waLink(`I'm interested in ${e.name} ${e.phase} at ${e.price}.`)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  openSalesWhatsApps(`I'm interested in ${e.name} ${e.phase} at ${e.price}.`);
+                }}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-base btn-navy mt-6 w-full py-3 text-sm hover:opacity-90"

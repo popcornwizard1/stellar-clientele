@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
-import { FACEBOOK, INSTAGRAM, PHONES, RC, TIKTOK, WHATSAPP, waLink } from "@/data/dala";
+import { COMPANY_PHONES, FACEBOOK, INSTAGRAM, MANAGER_PHONE, PHONES, RC, TIKTOK, WHATSAPP, openSalesWhatsApps, waLink } from "@/data/dala";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -45,12 +45,19 @@ export function Footer() {
             Fastest response. Chat or call{" "}
             <a
               href={waLink("Hello Dala Real Estate, I want to buy a plot.")}
+              onClick={(event) => {
+                event.preventDefault();
+                openSalesWhatsApps("Hello Dala Real Estate, I want to buy a plot.");
+              }}
               target="_blank"
               rel="noreferrer"
               className="font-bold text-gold hover:underline"
             >
-              +{WHATSAPP}
+              +{MANAGER_PHONE}
             </a>
+          </p>
+          <p className="mt-3 text-xs text-navy-foreground/65">
+            Company main lines: {COMPANY_PHONES.join(" · ")}
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PHONES, waLink } from "@/data/dala";
+import { MANAGER_PHONE, openSalesWhatsApps, waLink } from "@/data/dala";
 
 export function FloatingActions() {
   const [visible, setVisible] = useState(false);
@@ -18,7 +18,7 @@ export function FloatingActions() {
       }`}
     >
       <a
-        href={`tel:${PHONES[0]}`}
+        href={`tel:${MANAGER_PHONE}`}
         aria-label="Call Dala Real Estate"
         className="grid h-12 w-12 place-items-center rounded-full bg-navy text-navy-foreground shadow-elev transition-transform hover:scale-105"
       >
@@ -28,6 +28,10 @@ export function FloatingActions() {
       </a>
       <a
         href={waLink("Hello Dala Real Estate, I want to buy a plot.")}
+        onClick={(event) => {
+          event.preventDefault();
+          openSalesWhatsApps("Hello Dala Real Estate, I want to buy a plot.");
+        }}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
