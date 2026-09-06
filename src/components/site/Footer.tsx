@@ -70,7 +70,7 @@ export function Footer() {
             </a>
           </p>
           <p className="mt-3 text-xs text-navy-foreground/65">
-            Company lines: +{COMPANY_WHATSAPMS.join(", +")}
+            Company lines: +{COMPANY_WHATSAPPS.join(", +")}
           </p>
         </div>
       </div>
