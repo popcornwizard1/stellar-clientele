@@ -5,7 +5,7 @@ import {
   FACEBOOK,
   INSTAGRAM,
   OFFICE,
-  PHONES,
+  PHONE_ENTRIES,
   TIKTOK,
   estates,
   openSalesWhatsApps,
@@ -46,10 +46,15 @@ export function Contact() {
           <div className="mt-10 space-y-4 text-sm">
             <div>
               <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">Call</p>
-              <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-                {PHONES.map((p) => (
-                  <a key={p} href={`tel:${p}`} className="font-bold hover:text-gold">
-                    {p}
+              <div className="mt-1 flex flex-col gap-y-1 text-sm">
+                {PHONE_ENTRIES.map((entry) => (
+                  <a
+                    key={entry.number}
+                    href={`tel:${entry.number}`}
+                    className="inline-flex flex-wrap items-center gap-x-2 font-bold hover:text-gold"
+                  >
+                    <span className="text-navy-foreground/60">{entry.label}:</span>
+                    <span>{entry.number}</span>
                   </a>
                 ))}
               </div>
