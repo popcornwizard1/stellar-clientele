@@ -1,13 +1,14 @@
 import { Facebook, Instagram } from "lucide-react";
 import {
   COMPANY_PHONES,
+  COMPANY_WHATSAPPS,
   FACEBOOK,
   INSTAGRAM,
   MANAGER_PHONE,
-  PHONES,
+  MANAGER_WHATSAPP,
+  PHONE_ENTRIES,
   RC,
   TIKTOK,
-  WHATSAPP,
   openSalesWhatsApps,
   waLink,
 } from "@/data/dala";
@@ -40,10 +41,11 @@ export function Footer() {
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">Call us</p>
           <ul className="mt-4 space-y-2 text-sm">
-            {PHONES.map((p) => (
-              <li key={p}>
-                <a href={`tel:${p}`} className="text-navy-foreground/85 hover:text-gold">
-                  {p}
+            {PHONE_ENTRIES.map((entry) => (
+              <li key={entry.number} className="flex flex-wrap items-center gap-x-2">
+                <span className="text-navy-foreground/60">{entry.label}:</span>
+                <a href={`tel:${entry.number}`} className="font-bold hover:text-gold">
+                  {entry.number}
                 </a>
               </li>
             ))}
@@ -64,11 +66,11 @@ export function Footer() {
               rel="noreferrer"
               className="font-bold text-gold hover:underline"
             >
-              +{MANAGER_PHONE}
+              +{MANAGER_PHONE} (Manager)
             </a>
           </p>
           <p className="mt-3 text-xs text-navy-foreground/65">
-            Company main lines: {COMPANY_PHONES.join(" · ")}
+            Company lines: +{COMPANY_WHATSAPPS.join(", +")}
           </p>
         </div>
       </div>

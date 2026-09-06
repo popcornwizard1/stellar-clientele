@@ -19,9 +19,12 @@ export function FloatingActions() {
     >
       <a
         href={`tel:${MANAGER_PHONE}`}
-        aria-label="Call Dala Real Estate"
-        className="grid h-12 w-12 place-items-center rounded-full bg-navy text-navy-foreground shadow-elev transition-transform hover:scale-105"
+        aria-label="Call Manager"
+        className="group relative grid h-12 w-12 place-items-center rounded-full bg-navy text-navy-foreground shadow-elev transition-transform hover:scale-105"
       >
+        <span className="absolute right-full mr-3 hidden whitespace-nowrap rounded-md bg-navy px-2 py-1 text-xs font-bold text-navy-foreground opacity-0 transition-opacity group-hover:opacity-100 sm:block">
+          Call Manager
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -45,9 +48,12 @@ export function FloatingActions() {
         }}
         target="_blank"
         rel="noreferrer"
-        aria-label="Chat on WhatsApp"
-        className="grid h-12 w-12 place-items-center rounded-full bg-gold text-gold-foreground shadow-elev transition-transform hover:scale-105"
+        aria-label="Chat all sales lines on WhatsApp"
+        className="group relative grid h-12 w-12 place-items-center rounded-full bg-gold text-gold-foreground shadow-elev transition-transform hover:scale-105"
       >
+        <span className="absolute right-full mr-3 hidden whitespace-nowrap rounded-md bg-gold px-2 py-1 text-xs font-bold text-gold-foreground opacity-0 transition-opacity group-hover:opacity-100 sm:block">
+          Chat sales lines
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="22"

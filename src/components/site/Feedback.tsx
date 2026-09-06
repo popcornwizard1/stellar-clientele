@@ -43,7 +43,7 @@ export function Feedback() {
             href={`tel:${COMPANY_PHONES_DISPLAY}`}
             className="mt-6 inline-flex text-sm font-extrabold text-primary hover:underline"
           >
-            Company feedback line: {COMPANY_PHONES_DISPLAY}
+            Company line (Customer care): {COMPANY_PHONES_DISPLAY}
           </a>
         </div>
 
