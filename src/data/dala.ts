@@ -1,6 +1,11 @@
 export const MANAGER_PHONE = "07014664302";
 export const COMPANY_PHONES = ["09161711613", "07070259903"] as const;
-export const PHONES = [MANAGER_PHONE, ...COMPANY_PHONES, "09161621041"] as const;
+export const PHONE_ENTRIES = [
+  { label: "Manager", number: MANAGER_PHONE },
+  { label: "Company line", number: "09161711613" },
+  { label: "Company line 2 (Customer care)", number: "07070259903" },
+] as const;
+export const PHONES = PHONE_ENTRIES.map((entry) => entry.number);
 export const MANAGER_WHATSAPP = "2347014664302";
 export const COMPANY_WHATSAPPS = ["2349161711613", "2347070259903"] as const;
 export const SALES_WHATSAPPS = [MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS] as const;
