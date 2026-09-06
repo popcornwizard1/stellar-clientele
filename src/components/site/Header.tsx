@@ -43,7 +43,8 @@ export function Header() {
               href={`tel:${MANAGER_PHONE}`}
               className="hidden text-sm font-bold text-navy-foreground/85 hover:text-gold sm:block"
             >
-              {MANAGER_PHONE}
+              <span className="text-navy-foreground/60">Manager:</span>{" "}
+              <span className="hover:text-gold">{MANAGER_PHONE}</span>
             </a>
             <a
               href={waLink("Hello Dala Real Estate, I want to buy a plot.")}
