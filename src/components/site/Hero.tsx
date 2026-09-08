@@ -2,10 +2,10 @@ import heroImg from "@/assets/hero-estate.jpg";
 import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const stats = [
-  { value: "7", label: "Estates across 3 states" },
-  { value: "464–500", label: "SQM per plot" },
-  { value: "4 mths", label: "Spread payment" },
-  { value: "100%", label: "Genuine title" },
+  { value: "₦3M+", label: "Outright purchase" },
+  { value: "464", label: "SQM per plot" },
+  { value: "3–6", label: "Month payment plans" },
+  { value: "3 wks", label: "Deed & survey timeline" },
 ];
 
 export function Hero() {
@@ -13,7 +13,7 @@ export function Hero() {
     <section id="top" className="relative isolate overflow-hidden">
       <img
         src={heroImg}
-        alt="Surveyed land plots at a Dala Home Estate site at sunset"
+        alt="Surveyed land at a Dala Home Estate development site"
         width={1920}
         height={1088}
         className="absolute inset-0 -z-20 h-full w-full object-cover"
@@ -22,15 +22,13 @@ export function Hero() {
 
       <div className="container-x py-20 text-navy-foreground sm:py-28 lg:py-36">
         <div className="max-w-2xl rise">
-          <span className="eyebrow">Awka · Asaba · Lagos</span>
+          <span className="eyebrow">Ogwashi-Uku · Asaba · Delta State</span>
           <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl">
-            Own land you can <span className="text-gold">actually build on</span> — safely and
-            stresslessly.
+            Dala Home Estate Phase 3 — <span className="text-gold">your dream home awaits.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
-            Dala Real Estate develops genuine, verified estates with clean documentation and
-            flexible payment plans. Plots from <strong className="text-gold">₦3 million</strong>,
-            allocation the moment you complete payment.
+            Premium residential plots in Ogwashi-Uku, Asaba with modern infrastructure, freehold and
+            registered survey documentation, and flexible payment options from <strong className="text-gold">₦3 million</strong>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

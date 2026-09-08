@@ -12,7 +12,8 @@ export const SALES_WHATSAPPS = [MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS] as const
 export const FEEDBACK_WHATSAPP = "2349161711613";
 export const WHATSAPP = MANAGER_WHATSAPP;
 export const OFFICE =
-  "Suite B1/51 Mechanic Village, Opp. Northwest Filling Station, Asaba, Delta State";
+  "Suite 12, KM 36 Mobil Filling Station, Oribanwa, Lekki-Epe Expressway, Lagos, Nigeria";
+export const EMAIL = "ddalaakukwunigltd@gmail.com";
 export const RC = "RC 1545121";
 
 export const INSTAGRAM = "https://www.instagram.com/dala_realestate/";
@@ -93,10 +94,12 @@ export const estates: Estate[] = [
     id: "asaba-3",
     name: "Dala Home Estate Asaba",
     phase: "Phase 3",
-    city: "Asaba, Delta",
+    city: "Ogwashi-Uku, Asaba",
     size: "464 SQM",
-    price: "₦5M",
-    note: "Newly opened phase — earliest buyers get the best positions.",
+    price: "₦3M+",
+    badge: "Phase 3 Featured",
+    featured: true,
+    note: "Freehold and registered survey in Ogwashi-Uku, with instant physical allocation after full payment.",
   },
   {
     id: "lagos-1",

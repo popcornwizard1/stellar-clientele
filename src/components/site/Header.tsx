@@ -1,12 +1,12 @@
 import { MANAGER_PHONE, openSalesWhatsApps, waLink } from "@/data/dala";
 
 const nav = [
+  { label: "Phase 3", href: "#phase3" },
   { label: "Estates", href: "#estates" },
-  { label: "Why Dala", href: "#why" },
-  { label: "Payment Plans", href: "#plans" },
-  { label: "Proof", href: "#proof" },
+  { label: "Payment", href: "#plans" },
+  { label: "FAQs", href: "#faq" },
+  { label: "Landmarks", href: "#landmarks" },
   { label: "Contact", href: "#contact" },
-  { label: "Feedback", href: "#feedback" },
 ];
 
 export function Header() {
