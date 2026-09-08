@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
             Premium residential plots in Ogwashi-Uku, Asaba with modern infrastructure, freehold and
-            registered survey documentation, and flexible payment options from{
+            registered survey documentation, and flexible payment options from <strong className="text-gold">₦3 million</strong>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
