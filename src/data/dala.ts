@@ -8,7 +8,7 @@ export const PHONE_ENTRIES = [
 export const PHONES = PHONE_ENTRIES.map((entry) => entry.number);
 export const MANAGER_WHATSAPP = "2347014664302";
 export const COMPANY_WHATSAPPS = ["2349161711613", "2347070259903"] as const;
-export const SALES_WHATSAPPS = [MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS] as const;
+export const SALES_WHATSAPPS = COMPANY_WHATSAPPS;
 export const FEEDBACK_WHATSAPP = "2349161711613";
 export const WHATSAPP = MANAGER_WHATSAPP;
 export const OFFICE =
