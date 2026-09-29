@@ -1,32 +1,23 @@
-# Route client requests/orders to company WhatsApp lines only
+# Fix mobile layout and add floating social links
 
 ## Goal
-Redirect every sales/client WhatsApp CTA so enquiries and plot reservations go to the two company WhatsApp lines, not the manager's personal WhatsApp. Manager phone remains available for direct calls only.
+Make the existing Dala Real Estate page fit phone screens from 320px through 430px without changing its visual identity, content, functionality, or desktop presentation.
 
 ## Changes
+- Fix the FAQ grid’s intrinsic-width expansion—the confirmed root cause of the current 914px-wide mobile page—by allowing both grid columns and their contents to shrink within the viewport.
+- Make the FAQ category controls wrap into the available width on phones instead of widening the page, while preserving the current horizontal presentation on larger screens.
+- Add targeted `min-width: 0`, width, wrapping, and media containment rules to the existing header, forms, cards, grids, headings, buttons, and images where the mobile audit identifies pressure points.
+- Keep `overflow-x` clipping only as a final page-level safeguard after correcting the elements that create overflow.
+- Add a compact fixed social group at the bottom-left with recognizable Instagram, Facebook, and TikTok icons, accessible labels/tooltips, safe new-tab links, and the existing navy/gold/white styling.
+- Update shared social URLs to the exact profiles supplied so the footer, contact area, and new floating group all point to the same correct accounts.
+- Keep the existing footer social links and right-side call/WhatsApp controls unchanged.
 
-### 1. Update WhatsApp routing constants (`src/data/dala.ts`)
-- Change `SALES_WHATSAPPS` from `[MANAGER_WHATSAPP, ...COMPANY_WHATSAPPS]` to `[...COMPANY_WHATSAPPS]` (company lines only).
-- Change `WHATSAPP` fallback from `MANAGER_WHATSAPP` to `COMPANY_WHATSAPPS[0]` so right-click/open-in-new-tab links also land on a company line.
-- Keep `MANAGER_PHONE`, `MANAGER_WHATSAPP`, `COMPANY_PHONES`, `COMPANY_WHATSAPPS`, `FEEDBACK_WHATSAPP`, and `PHONE_ENTRIES` unchanged.
+## Verification
+- Test the rendered page at 320, 360, 375, 390, 412, and 430px.
+- At every width, compare viewport width against page scroll width and identify any element crossing either edge.
+- Visually inspect the header, hero, cards, images, FAQ search/categories/answers, forms, footer, and both floating control groups.
+- Verify all three social links, accessible names, safe new-tab behavior, normal vertical scrolling, and no browser/runtime errors.
 
-### 2. Update sales-line copy in `src/components/site/Contact.tsx`
-- Change the helper text below the submit button from "Opens three WhatsApp chats..." to "Opens two WhatsApp chats...".
-
-### 3. Update WhatsApp display in `src/components/site/Footer.tsx`
-- Replace the "+{MANAGER_PHONE} (Manager)" WhatsApp link with the first company line (`+{COMPANY_WHATSAPPS[0]}`).
-- Keep the "Company lines" line or merge it so the footer no longer promotes the manager's WhatsApp for sales.
-
-### 4. Update floating action labels in `src/components/site/FloatingActions.tsx`
-- Change tooltip/aria-label from "Chat all sales lines" / "Chat sales lines" to "Chat company sales lines" so the label matches the new routing.
-- Leave the call-manager button untouched (voice calls still route to the manager).
-
-### 5. Verify no other manager-WhatsApp references remain
-- Search for usages of `MANAGER_WHATSAPP` and `MANAGER_PHONE` in WhatsApp contexts.
-- Confirm `Header`, `Hero`, `PromoBanner`, `Estates`, and `Plans` use `openSalesWhatsApps`/`waLink` and therefore pick up the new routing automatically.
-
-## Outcome
-- Sales enquiries, plot reservations, price-list requests, and consultation CTAs open WhatsApp chats to the two company lines simultaneously.
-- The manager's WhatsApp is no longer used for sales routing.
-- The manager's phone number is still callable via `tel:` links and the floating call button.
-- Feedback/complaints continue to go to the first company line only.
+## Technical details
+- Preserve the current responsive breakpoints and desktop classes wherever possible; fixes will be mobile-first and narrowly scoped.
+- Reuse Lucide for Instagram/Facebook and the project’s existing TikTok brand glyph, avoiding a new dependency.
