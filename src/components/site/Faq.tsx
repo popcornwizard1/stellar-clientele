@@ -45,17 +45,17 @@ const faqs: FaqItem[] = [
   {
     category: "Payment options",
     q: "What is the outright purchase price?",
-    a: "The outright purchase option is above ₦3 million per plot, before the listed statutory and development charges.",
+    a: "The outright purchase price is ₦5 million per plot, before the listed statutory and development charges.",
   },
   {
     category: "Payment options",
     q: "Can I pay in three months?",
-    a: "Yes. The three-month instalment option is ₦3.5 million, with an initial deposit of ₦1 million.",
+    a: "Yes. The instalment plan starts with a ₦1 million initial deposit, then ₦1 million monthly payments toward the ₦5 million plot price. Confirm the exact schedule with the sales team.",
   },
   {
     category: "Payment options",
     q: "Can I pay in six months?",
-    a: "Yes. The six-month instalment option is above ₦4 million, with an initial deposit of ₦1.5 million.",
+    a: "Yes. The six-month option spreads the ₦5 million plot price with a ₦1 million initial deposit, then ₦1 million monthly payments. Confirm the exact schedule with the sales team.",
   },
   {
     category: "Costs & fees",

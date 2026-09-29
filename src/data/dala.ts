@@ -96,7 +96,7 @@ export const estates: Estate[] = [
     phase: "Phase 3",
     city: "Ogwashi-Uku, Asaba",
     size: "464 SQM",
-    price: "₦3M+",
+    price: "₦5M",
     badge: "Phase 3 Featured",
     featured: true,
     note: "Freehold and registered survey in Ogwashi-Uku, with instant physical allocation after full payment.",

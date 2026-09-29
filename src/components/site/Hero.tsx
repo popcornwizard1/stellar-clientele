@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-estate.jpg";
 import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const stats = [
-  { value: "₦3M+", label: "Outright purchase" },
+  { value: "₦5M", label: "Outright purchase" },
   { value: "464", label: "SQM per plot" },
   { value: "3–6", label: "Month payment plans" },
   { value: "3 wks", label: "Deed & survey timeline" },
@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
             Premium residential plots in Ogwashi-Uku, Asaba with modern infrastructure, freehold and
-            registered survey documentation, and flexible payment options from <strong className="text-gold">₦3 million</strong>.
+            registered survey documentation, and flexible payment options from <strong className="text-gold">₦5 million</strong>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
