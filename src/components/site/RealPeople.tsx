@@ -129,11 +129,11 @@ export function RealPeople({ story }: { story: StoryKey }) {
           </div>
 
            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {content.photos.map((photo) => (
+            {content.photos.map((photo, photoIndex) => (
               <figure key={photo.src} className="group relative overflow-hidden rounded-xl bg-secondary shadow-card">
                 <ImageLightbox
                   images={content.photos}
-                  index={content.photos.indexOf(photo)}
+                  index={photoIndex}
                   src={photo.src}
                   alt={photo.alt}
                   loading="lazy"

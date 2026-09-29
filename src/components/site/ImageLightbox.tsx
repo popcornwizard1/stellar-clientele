@@ -130,7 +130,7 @@ export function ImageLightbox({ images, index, triggerClassName, className, ...i
               wheel={{ step: 0.12 }}
               doubleClick={{ mode: "toggle", step: 1.5 }}
               panning={{ disabled: scale <= 1.01 }}
-              onTransformed={(_, state) => setScale(state.scale)}
+              onTransform={(_, state) => setScale(state.scale)}
             >
               {({ zoomIn, zoomOut, resetTransform }) => (
                 <>
