@@ -54,6 +54,7 @@ export function Why() {
           <ImageLightbox
             images={whyImages}
             index={0}
+            triggerClassName="col-span-2"
             src={whyImages[0]?.src}
             alt={whyImages[0]?.alt}
             loading="lazy"
