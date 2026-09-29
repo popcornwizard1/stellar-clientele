@@ -4,19 +4,19 @@ import { ImageLightbox } from "@/components/site/ImageLightbox";
 const paymentOptions = [
   {
     title: "Outright purchase",
-    price: "₦3M+",
-    detail: "Pay the full plot price and move straight to physical allocation once all applicable charges are complete.",
+    price: "₦5M",
+    detail: "Pay the full plot price of ₦5M and move straight to physical allocation once all applicable charges are complete.",
     featured: true,
   },
   {
     title: "3-month instalment",
-    price: "₦3.5M",
-    detail: "Initial deposit: ₦1M. Confirm the payment schedule with the sales team before proceeding.",
+    price: "₦1M/mo",
+    detail: "Initial deposit: ₦1M, then ₦1M monthly toward the ₦5M plot price. Confirm the payment schedule with the sales team before proceeding.",
   },
   {
     title: "6-month instalment",
-    price: "₦4M+",
-    detail: "Initial deposit: ₦1.5M. A longer spread for buyers who want more room in their budget.",
+    price: "₦1M/mo",
+    detail: "Initial deposit: ₦1M, then ₦1M monthly toward the ₦5M plot price. A longer spread for buyers who want more room in their budget.",
   },
 ];
 
