@@ -1,4 +1,5 @@
 import { openSalesWhatsApps, waLink } from "@/data/dala";
+import { ImageLightbox } from "@/components/site/ImageLightbox";
 
 const paymentOptions = [
   {
@@ -97,7 +98,10 @@ export function Plans() {
           </a>
         </div>
 
-        <img
+        <ImageLightbox
+          images={[{ src: "/images/dala-5.webp", alt: "Dala Home Estate Phase 3 information and allocation material" }]}
+          index={0}
+          triggerClassName="mx-auto max-w-sm rounded-2xl"
           src="/images/dala-5.webp"
           alt="Dala Home Estate Phase 3 information and allocation material"
           loading="lazy"

@@ -1,3 +1,11 @@
+import { ImageLightbox, type LightboxImage } from "@/components/site/ImageLightbox";
+
+const whyImages: LightboxImage[] = [
+  { src: "/images/dala-16.webp", alt: "Dala Real Estate agent at the Asaba Phase 3 estate signboard" },
+  { src: "/images/dala-11.webp", alt: "Graded land at a Dala estate development site" },
+  { src: "/images/dala-20.webp", alt: "The Dala Real Estate team at the Asaba office" },
+];
+
 const reasons = [
   {
     title: "Genuine properties",
@@ -43,21 +51,28 @@ export function Why() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <img
-            src="/images/dala-16.webp"
-            alt="Dala Real Estate agent at the Asaba Phase 3 estate signboard"
+          <ImageLightbox
+            images={whyImages}
+            index={0}
+            triggerClassName="col-span-2"
+            src={whyImages[0]?.src}
+            alt={whyImages[0]?.alt}
             loading="lazy"
             className="col-span-2 h-56 w-full rounded-2xl object-cover shadow-elev"
           />
-          <img
-            src="/images/dala-11.webp"
-            alt="Graded land at a Dala estate development site"
+          <ImageLightbox
+            images={whyImages}
+            index={1}
+            src={whyImages[1]?.src}
+            alt={whyImages[1]?.alt}
             loading="lazy"
             className="h-44 w-full rounded-2xl object-cover"
           />
-          <img
-            src="/images/dala-20.webp"
-            alt="The Dala Real Estate team at the Asaba office"
+          <ImageLightbox
+            images={whyImages}
+            index={2}
+            src={whyImages[2]?.src}
+            alt={whyImages[2]?.alt}
             loading="lazy"
             className="h-44 w-full rounded-2xl object-cover"
           />

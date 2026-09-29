@@ -1,3 +1,11 @@
+import { ImageLightbox, type LightboxImage } from "@/components/site/ImageLightbox";
+
+const proofImages: LightboxImage[] = [
+  { src: "/images/dala-31.webp", alt: "Dala Real Estate team at an allocation event" },
+  { src: "/images/dala-33.webp", alt: "Dala Real Estate management addressing clients at an event" },
+  { src: "/images/dala-9.webp", alt: "Dala Estate price list across Lagos, Awka and Asaba" },
+];
+
 const testimonials = [
   {
     quote:
@@ -29,21 +37,27 @@ export function Proof() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          <img
-            src="/images/dala-31.webp"
-            alt="Dala Real Estate team at an allocation event"
+          <ImageLightbox
+            images={proofImages}
+            index={0}
+            src={proofImages[0]?.src}
+            alt={proofImages[0]?.alt}
             loading="lazy"
             className="h-64 w-full rounded-2xl object-cover"
           />
-          <img
-            src="/images/dala-33.webp"
-            alt="Dala Real Estate management addressing clients at an event"
+          <ImageLightbox
+            images={proofImages}
+            index={1}
+            src={proofImages[1]?.src}
+            alt={proofImages[1]?.alt}
             loading="lazy"
             className="h-64 w-full rounded-2xl object-cover"
           />
-          <img
-            src="/images/dala-9.webp"
-            alt="Dala Estate price list across Lagos, Awka and Asaba"
+          <ImageLightbox
+            images={proofImages}
+            index={2}
+            src={proofImages[2]?.src}
+            alt={proofImages[2]?.alt}
             loading="lazy"
             className="h-64 w-full rounded-2xl object-contain bg-card p-2"
           />

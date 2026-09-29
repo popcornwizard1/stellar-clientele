@@ -1,3 +1,5 @@
+import { ImageLightbox } from "@/components/site/ImageLightbox";
+
 const landmarks = [
   { src: "/images/phase3/landmark-000.jpg", title: "The New Asaba", body: "A growing urban corridor with new movement, homes and commercial activity." },
   { src: "/images/phase3/landmark-001.jpg", title: "Residential vision", body: "Modern residential communities show the kind of neighbourhoods the region can support." },
@@ -28,7 +30,9 @@ export function Landmarks() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {landmarks.map((landmark) => (
             <figure key={landmark.title} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-              <img
+              <ImageLightbox
+                images={landmarks.map(({ src, title, body }) => ({ src, alt: title, caption: body }))}
+                index={landmarks.indexOf(landmark)}
                 src={landmark.src}
                 alt={landmark.title}
                 loading="lazy"
