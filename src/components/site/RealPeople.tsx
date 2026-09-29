@@ -9,19 +9,31 @@ const stories = {
       {
         src: "/images/team/dala-office-team.jpg",
         alt: "Dala Real Estate team together at the company office",
-        caption: "The Dala office team",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: false,
       },
       {
         src: "/images/team/property-team.jpg",
         alt: "Dala Real Estate property team during a client visit",
-        caption: "Ready to guide your property journey",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: false,
       },
       {
         src: "/images/team/community-highlights.jpg",
         alt: "Dala representatives and visitors at the company office",
-        caption: "Real conversations with real clients",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
+       {
+         src: "/images/team/office-activity.jpg",
+         alt: "Dala Real Estate staff and visitors at the company office",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
+       {
+         src: "/images/team/dala-representative.jpg",
+         alt: "Dala Real Estate representative beside the company display",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: false,
       },
     ],
@@ -34,15 +46,27 @@ const stories = {
       {
         src: "/images/team/site-verification.jpg",
         alt: "Dala representatives checking survey beacons on a property site",
-        caption: "On-site plot and beacon verification",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: false,
       },
       {
         src: "/images/team/allocation-announcement.jpg",
         alt: "Dala Home Estate allocation announcement with site and transport details",
-        caption: "Organised allocation and inspection support",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: true,
       },
+       {
+         src: "/images/team/field-investment-team.jpg",
+         alt: "Dala Real Estate field team reviewing a property plan",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
+       {
+         src: "/images/team/asaba-estate-site.jpg",
+         alt: "Dala Real Estate representative at the Asaba estate site",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
     ],
   },
   support: {
@@ -53,15 +77,27 @@ const stories = {
       {
         src: "/images/team/payment-reminder.jpg",
         alt: "Dala Real Estate development fee and official account reminder",
-        caption: "Transparent payment reminders",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: true,
       },
       {
         src: "/images/team/office-consultation.jpg",
         alt: "A Dala Real Estate representative working at the office",
-        caption: "Direct support from the office team",
+         caption: "You are working with real people who have your needs and interests at heart.",
         contain: false,
       },
+       {
+         src: "/images/team/happy-weekend-client.jpg",
+         alt: "Dala Real Estate representative sharing a customer appreciation message",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
+       {
+         src: "/images/team/client-document-review.jpg",
+         alt: "Dala Real Estate team reviewing property documents with a client",
+         caption: "You are working with real people who have your needs and interests at heart.",
+         contain: false,
+       },
     ],
   },
 } satisfies Record<
@@ -86,11 +122,11 @@ export function RealPeople({ story }: { story: StoryKey }) {
             <h2 className="mt-3 text-3xl sm:text-4xl">{content.title}</h2>
             <p className="mt-4 text-muted-foreground">{content.body}</p>
             <blockquote className="mt-7 border-l-4 border-gold pl-5 font-display text-xl leading-tight text-primary sm:text-2xl">
-              “You are working with real people who understand your needs and interests.”
+               “You are working with real people who have your needs and interests at heart.”
             </blockquote>
           </div>
 
-          <div className={`grid gap-3 ${content.photos.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {content.photos.map((photo) => (
               <figure key={photo.src} className="group relative overflow-hidden rounded-xl bg-secondary shadow-card">
                 <img
@@ -101,7 +137,7 @@ export function RealPeople({ story }: { story: StoryKey }) {
                     photo.contain ? "object-contain" : "object-cover"
                   }`}
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-navy/90 px-4 py-3 text-xs font-bold text-navy-foreground">
+                 <figcaption className="absolute inset-x-0 bottom-0 bg-navy/90 px-4 py-3 text-xs font-bold leading-relaxed text-navy-foreground">
                   {photo.caption}
                 </figcaption>
               </figure>
