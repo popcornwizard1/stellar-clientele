@@ -1,3 +1,5 @@
+import { ImageLightbox } from "@/components/site/ImageLightbox";
+
 type StoryKey = "team" | "field" | "support";
 
 const stories = {
@@ -129,7 +131,9 @@ export function RealPeople({ story }: { story: StoryKey }) {
            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {content.photos.map((photo) => (
               <figure key={photo.src} className="group relative overflow-hidden rounded-xl bg-secondary shadow-card">
-                <img
+                <ImageLightbox
+                  images={content.photos}
+                  index={content.photos.indexOf(photo)}
                   src={photo.src}
                   alt={photo.alt}
                   loading="lazy"

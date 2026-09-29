@@ -11,3 +11,4 @@
 
 - Keep user-supplied site imagery under `public/images/` with lowercase, case-exact filenames so deployments remain portable beyond Lovable hosting.
 - Keep persistent social shortcuts in the dedicated floating social component so they remain independent of call and WhatsApp actions.
+- Route meaningful content imagery through the shared image lightbox; keep decorative full-bleed backgrounds outside it.

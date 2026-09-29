@@ -7,3 +7,4 @@
 - [x] Reinforce every photo group with the real-people trust message
 - [x] Add six new supplied photos to the existing trust sections with the requested message on every image
 - [x] Fix mobile overflow and responsive layout at 320–430px, add floating social links, and verify all target widths
+- [ ] Add and verify a full-screen zoomable image viewer across all meaningful site imagery
