@@ -16,6 +16,7 @@ import { Phase3Highlights } from "@/components/site/Phase3Highlights";
 import { Phase3Details } from "@/components/site/Phase3Details";
 import { Landmarks } from "@/components/site/Landmarks";
 import { RealPeople } from "@/components/site/RealPeople";
+import { FloatingSocials } from "@/components/site/FloatingSocials";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,6 +64,7 @@ function Index() {
         <Feedback />
       </main>
       <Footer />
+      <FloatingSocials />
       <FloatingActions />
     </>
   );

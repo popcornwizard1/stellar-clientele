@@ -21,8 +21,8 @@ export function Estates() {
                 e.featured ? "ring-2 ring-gold" : ""
               }`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <div>
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+                <div className="min-w-0">
                   <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-muted-foreground">
                     {e.city}
                   </p>
@@ -30,13 +30,13 @@ export function Estates() {
                   <p className="text-sm font-bold text-primary">{e.phase}</p>
                 </div>
                 {e.badge && (
-                  <span className="rounded-full bg-gold px-3 py-1 text-[0.6rem] font-extrabold uppercase tracking-wider text-gold-foreground">
+                  <span className="max-w-28 rounded-full bg-gold px-3 py-1 text-center text-[0.6rem] font-extrabold uppercase tracking-wider text-gold-foreground sm:max-w-none">
                     {e.badge}
                   </span>
                 )}
               </div>
 
-              <div className="mt-6 flex items-end gap-3">
+              <div className="mt-6 flex flex-wrap items-end gap-3">
                 <span className="font-display text-3xl text-primary">{e.price}</span>
                 {e.oldPrice && (
                   <span className="pb-1 text-sm font-bold text-destructive line-through">
