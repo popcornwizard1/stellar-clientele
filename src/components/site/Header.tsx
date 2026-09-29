@@ -13,12 +13,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 navy-panel/95 backdrop-blur">
       <div className="navy-panel">
-        <div className="container-x flex h-16 items-center justify-between gap-4">
-          <a href="#top" className="flex items-center gap-3">
+        <div className="container-x grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:justify-between sm:gap-4">
+          <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3">
             <span className="grid h-9 w-9 place-items-center rounded-lg bg-gold font-display text-gold-foreground">
               D
             </span>
-            <span className="leading-tight">
+            <span className="min-w-0 leading-tight">
               <span className="block font-display text-sm tracking-widest">DALA</span>
               <span className="block text-[0.6rem] uppercase tracking-[0.3em] text-gold">
                 Real Estate
@@ -38,7 +38,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <a
               href={`tel:${MANAGER_PHONE}`}
               className="hidden text-sm font-bold text-navy-foreground/85 hover:text-gold sm:block"
@@ -54,9 +54,10 @@ export function Header() {
               }}
               target="_blank"
               rel="noreferrer"
-              className="btn-base btn-gold btn-gold-hover px-4 py-2 text-xs"
+              className="btn-base btn-gold btn-gold-hover px-3 py-2 text-xs sm:px-4"
             >
-              Chat on WhatsApp
+              <span className="sm:hidden">WhatsApp</span>
+              <span className="hidden sm:inline">Chat on WhatsApp</span>
             </a>
           </div>
         </div>

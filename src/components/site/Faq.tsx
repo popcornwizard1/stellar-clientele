@@ -116,8 +116,8 @@ export function Faq() {
   return (
     <section id="faq" className="bg-surface py-20 sm:py-24">
       <div className="container-x">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <div className="lg:sticky lg:top-28">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:items-start">
+          <div className="min-w-0 lg:sticky lg:top-28">
             <span className="eyebrow">The answers buyers need</span>
             <h2 className="mt-3 text-3xl sm:text-4xl">Clear answers before you commit.</h2>
             <p className="mt-4 text-muted-foreground">
@@ -134,7 +134,7 @@ export function Faq() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0 max-w-full">
             <label className="relative block" htmlFor="faq-search">
               <span className="sr-only">Search frequently asked questions</span>
               <Search
@@ -150,11 +150,11 @@ export function Faq() {
               />
             </label>
 
-            <div className="mt-5 flex gap-2 overflow-x-auto pb-2">
+            <div className="mt-5 flex max-w-full flex-wrap gap-2 pb-2">
               <button
                 type="button"
                 onClick={() => setActiveCategory("All")}
-                className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-bold transition-colors ${
+                className={`max-w-full rounded-full border px-4 py-2 text-sm font-bold transition-colors ${
                   activeCategory === "All"
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-border bg-card text-muted-foreground hover:border-primary hover:text-primary"
@@ -167,7 +167,7 @@ export function Faq() {
                   key={label}
                   type="button"
                   onClick={() => setActiveCategory(label)}
-                  className={`inline-flex whitespace-nowrap items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold transition-colors ${
+                  className={`inline-flex max-w-full items-center gap-2 rounded-full border px-4 py-2 text-left text-sm font-bold transition-colors ${
                     activeCategory === label
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border bg-card text-muted-foreground hover:border-primary hover:text-primary"
@@ -184,7 +184,7 @@ export function Faq() {
                 filteredFaqs.map((faq) => (
                   <details key={faq.q} className="group py-5">
                     <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-bold marker:hidden">
-                      <span>{faq.q}</span>
+                      <span className="min-w-0">{faq.q}</span>
                       <span className="shrink-0 text-2xl font-normal leading-none text-primary transition-transform group-open:rotate-45">
                         +
                       </span>

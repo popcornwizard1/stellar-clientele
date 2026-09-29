@@ -104,11 +104,24 @@
     border-color: var(--color-border);
   }
 
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
   }
 
   h1,
@@ -122,6 +135,7 @@
 }
 
 @utility container-x {
+  box-sizing: border-box;
   margin-inline: auto;
   width: 100%;
   max-width: 80rem;
