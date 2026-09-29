@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     label: "Open Dala Real Estate on Facebook",
-    title: "Facebook: @dalarealestate",
+    title: "Facebook: Dala Homes",
     href: FACEBOOK,
     icon: <Facebook className="h-4 w-4" aria-hidden="true" />,
   },
