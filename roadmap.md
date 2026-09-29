@@ -3,3 +3,5 @@
 - [ ] Add Phase 3 highlights, services, timeline, payment methods, and landmarks sections
 - [ ] Replace the FAQ with searchable categorized interactive FAQs from the PDF
 - [ ] Preserve existing WhatsApp/contact/feedback routing and verify the page
+- [ ] Place the seven supplied team, office, payment, and site photos between key sections
+- [ ] Reinforce every photo group with the real-people trust message
