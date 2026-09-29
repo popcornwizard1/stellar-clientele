@@ -89,7 +89,7 @@ export function Phase3Details() {
             </article>
             <article className="surface-card p-6">
               <FileText className="h-7 w-7 text-primary" aria-hidden="true" />
-              <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.18em] text-muted-foreground">Secondary account</p>
+              <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.18em] text-muted-foreground">First Bank</p>
               <p className="mt-2 font-display text-2xl text-primary">2045985160</p>
               <p className="mt-2 text-sm font-bold">Dala Real Estate Nig Ltd</p>
             </article>
