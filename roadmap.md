@@ -6,3 +6,4 @@
 - [x] Place the seven supplied team, office, payment, and site photos between key sections
 - [x] Reinforce every photo group with the real-people trust message
 - [x] Add six new supplied photos to the existing trust sections with the requested message on every image
+- [ ] Fix mobile overflow and responsive layout at 320–430px, add floating social links, and verify all target widths
