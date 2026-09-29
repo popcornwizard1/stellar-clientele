@@ -1,5 +1,7 @@
-- [ ] Extract production-safe landmark imagery from the uploaded Phase 3 PDF
-- [ ] Update the site content and hero for Dala Home Estate Phase 3
-- [ ] Add Phase 3 highlights, services, timeline, payment methods, and landmarks sections
-- [ ] Replace the FAQ with searchable categorized interactive FAQs from the PDF
-- [ ] Preserve existing WhatsApp/contact/feedback routing and verify the page
+- [x] Extract production-safe landmark imagery from the uploaded Phase 3 PDF
+- [x] Update the site content and hero for Dala Home Estate Phase 3
+- [x] Add Phase 3 highlights, services, timeline, payment methods, and landmarks sections
+- [x] Replace the FAQ with searchable categorized interactive FAQs from the PDF
+- [x] Preserve existing WhatsApp/contact/feedback routing and verify the page
+- [x] Place the seven supplied team, office, payment, and site photos between key sections
+- [x] Reinforce every photo group with the real-people trust message

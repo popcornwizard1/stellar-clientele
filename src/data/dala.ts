@@ -10,7 +10,7 @@ export const MANAGER_WHATSAPP = "2347014664302";
 export const COMPANY_WHATSAPPS = ["2349161711613", "2347070259903"] as const;
 export const SALES_WHATSAPPS = COMPANY_WHATSAPPS;
 export const FEEDBACK_WHATSAPP = "2349161711613";
-export const WHATSAPP = MANAGER_WHATSAPP;
+export const WHATSAPP = COMPANY_WHATSAPPS[0];
 export const OFFICE =
   "Suite 12, KM 36 Mobil Filling Station, Oribanwa, Lekki-Epe Expressway, Lagos, Nigeria";
 export const EMAIL = "ddalaakukwunigltd@gmail.com";
