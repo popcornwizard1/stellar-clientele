@@ -199,7 +199,7 @@ export function Contact() {
             Send on WhatsApp
           </button>
           <p className="text-center text-xs text-navy/70">
-            Opens three WhatsApp chats with your details prefilled. No spam, ever.
+            Opens two company WhatsApp chats with your details prefilled. No spam, ever.
           </p>
         </form>
       </div>

@@ -12,6 +12,10 @@ import { Contact } from "@/components/site/Contact";
 import { Feedback } from "@/components/site/Feedback";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
+import { Phase3Highlights } from "@/components/site/Phase3Highlights";
+import { Phase3Details } from "@/components/site/Phase3Details";
+import { Landmarks } from "@/components/site/Landmarks";
+import { RealPeople } from "@/components/site/RealPeople";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,9 +48,15 @@ function Index() {
       <main>
         <PromoBanner />
         <Hero />
+        <Phase3Highlights />
+        <RealPeople story="team" />
         <Estates />
         <Why />
+        <RealPeople story="field" />
         <Plans />
+        <Phase3Details />
+        <RealPeople story="support" />
+        <Landmarks />
         <Proof />
         <Faq />
         <Contact />

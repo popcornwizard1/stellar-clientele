@@ -4,8 +4,6 @@ import {
   COMPANY_WHATSAPPS,
   FACEBOOK,
   INSTAGRAM,
-  MANAGER_PHONE,
-  MANAGER_WHATSAPP,
   PHONE_ENTRIES,
   RC,
   TIKTOK,
@@ -66,11 +64,11 @@ export function Footer() {
               rel="noreferrer"
               className="font-bold text-gold hover:underline"
             >
-              +{MANAGER_PHONE} (Manager)
+              +{COMPANY_WHATSAPPS[0]} (Company line)
             </a>
           </p>
           <p className="mt-3 text-xs text-navy-foreground/65">
-            Company lines: +{COMPANY_WHATSAPPS.join(", +")}
+            Also available: +{COMPANY_WHATSAPPS[1]} (Customer care)
           </p>
         </div>
       </div>

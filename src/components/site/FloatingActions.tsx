@@ -48,11 +48,11 @@ export function FloatingActions() {
         }}
         target="_blank"
         rel="noreferrer"
-        aria-label="Chat all sales lines on WhatsApp"
+        aria-label="Chat company sales lines on WhatsApp"
         className="group relative grid h-12 w-12 place-items-center rounded-full bg-gold text-gold-foreground shadow-elev transition-transform hover:scale-105"
       >
         <span className="absolute right-full mr-3 hidden whitespace-nowrap rounded-md bg-gold px-2 py-1 text-xs font-bold text-gold-foreground opacity-0 transition-opacity group-hover:opacity-100 sm:block">
-          Chat sales lines
+          Chat company sales lines
         </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
