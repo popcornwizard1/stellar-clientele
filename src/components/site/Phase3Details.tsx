@@ -14,10 +14,10 @@ const timeline = [
   ["04", "Receive documents", "Deed of assignment and registered survey are issued three weeks after allocation."],
 ] as const;
 
-export function Phase3Details() {
+export function Phase3Details({ part = "all" }: { part?: "all" | "services" | "payment" }) {
   return (
     <>
-      <section id="services" className="py-20 sm:py-24">
+      {part !== "payment" && <section id="services" className="py-20 sm:py-24">
         <div className="container-x">
           <div className="max-w-2xl">
             <span className="eyebrow">What Dala does</span>
@@ -37,9 +37,9 @@ export function Phase3Details() {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
-      <section id="process" className="navy-panel py-20 sm:py-24">
+      {part !== "services" && <><section id="process" className="navy-panel py-20 sm:py-24">
         <div className="container-x">
           <div className="max-w-2xl">
             <span className="eyebrow">Your ownership timeline</span>
@@ -99,7 +99,7 @@ export function Phase3Details() {
             </p>
           </div>
         </div>
-      </section>
+      </section></>}
     </>
   );
 }
