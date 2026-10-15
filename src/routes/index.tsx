@@ -1,71 +1,22 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-import { Header } from "@/components/site/Header";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PromoBanner } from "@/components/site/PromoBanner";
 import { Hero } from "@/components/site/Hero";
-import { Estates } from "@/components/site/Estates";
-import { Why } from "@/components/site/Why";
-import { Plans } from "@/components/site/Plans";
-import { Proof } from "@/components/site/Proof";
-import { Faq } from "@/components/site/Faq";
-import { Contact } from "@/components/site/Contact";
-import { Feedback } from "@/components/site/Feedback";
-import { Footer } from "@/components/site/Footer";
-import { FloatingActions } from "@/components/site/FloatingActions";
 import { Phase3Highlights } from "@/components/site/Phase3Highlights";
-import { Phase3Details } from "@/components/site/Phase3Details";
-import { Landmarks } from "@/components/site/Landmarks";
 import { RealPeople } from "@/components/site/RealPeople";
-import { FloatingSocials } from "@/components/site/FloatingSocials";
+import { Estates } from "@/components/site/Estates";
+import { Button } from "@/components/ui/button";
+import { pageHead } from "@/lib/page-head";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dala Real Estate | Buy Land in Awka, Asaba & Lagos" },
-      {
-        name: "description",
-        content:
-          "Own genuine, verified land from Dala Real Estate in Awka, Asaba and Lagos. Flexible payment plans from ₦3M. Instant allocation and secure documentation.",
-      },
-      { property: "og:title", content: "Dala Real Estate | Buy Land in Awka, Asaba & Lagos" },
-      {
-        property: "og:description",
-        content:
-          "Genuine properties, flexible payment plans and stressless ownership across Awka, Asaba and Lagos.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://dalaestate.com/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "https://dalaestate.com/" }],
-  }),
+  head: () => pageHead("Dala Home Estate Phase 3", "Explore Dala Home Estate Phase 3 in Ogwashi-Uku, Asaba: 464 sqm plots at ₦5 million, flexible payments, and company inspection enquiries.", "/"),
   component: Index,
 });
-
 function Index() {
-  return (
-    <>
-      <Header />
-      <main>
-        <PromoBanner />
-        <Hero />
-        <Phase3Highlights />
-        <RealPeople story="team" />
-        <Estates />
-        <Why />
-        <RealPeople story="field" />
-        <Plans />
-        <Phase3Details />
-        <RealPeople story="support" />
-        <Landmarks />
-        <Proof />
-        <Faq />
-        <Contact />
-        <Feedback />
-      </main>
-      <Footer />
-      <FloatingSocials />
-      <FloatingActions />
-    </>
-  );
+  return <><PromoBanner /><Hero /><Phase3Highlights /><RealPeople story="team" /><Estates />
+    <section className="navy-panel py-16"><div className="container-x"><span className="eyebrow">Your next step</span><h2 className="mt-3 text-3xl">Find the answers. Meet the team.</h2><div className="mt-8 flex flex-wrap gap-3">
+      <Button asChild className="bg-gold text-gold-foreground hover:bg-gold/90"><Link to="/faq">Browse FAQs</Link></Button>
+      <Button asChild variant="outline"><Link to="/payment">Payment plans</Link></Button>
+      <Button asChild variant="outline"><Link to="/contact">Book an inspection</Link></Button>
+    </div></div></section>
+  </>;
 }
