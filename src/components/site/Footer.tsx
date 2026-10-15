@@ -1,4 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { BrandLogo } from "./BrandLogo";
+import { siteNav } from "./Header";
 import {
   COMPANY_PHONES,
   COMPANY_WHATSAPPS,
@@ -18,17 +21,7 @@ export function Footer() {
     <footer className="navy-panel border-t border-white/10 py-12 sm:py-16">
       <div className="container-x grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-gold font-display text-gold-foreground">
-              D
-            </span>
-            <span className="leading-tight">
-              <span className="block font-display text-sm tracking-widest">DALA</span>
-              <span className="block text-[0.6rem] uppercase tracking-[0.3em] text-gold">
-                Real Estate
-              </span>
-            </span>
-          </div>
+          <BrandLogo />
           <p className="mt-4 max-w-sm text-sm text-navy-foreground/75">
             Genuine, verified estates across Awka, Asaba and Lagos. Flexible payment plans, instant
             allocation and documentation you can trust.
@@ -73,6 +66,9 @@ export function Footer() {
         </div>
       </div>
 
+      <nav aria-label="Footer navigation" className="container-x mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-bold">
+        {siteNav.map(item => <Link key={item.to} to={item.to} className="text-navy-foreground/80 hover:text-gold">{item.label}</Link>)}
+      </nav>
       <div className="container-x mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
         <p className="text-xs text-navy-foreground/60">
           © {year} Dala Real Estate Nig Ltd. All rights reserved.

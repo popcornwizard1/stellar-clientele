@@ -8,3 +8,6 @@
 - [x] Add six new supplied photos to the existing trust sections with the requested message on every image
 - [x] Fix mobile overflow and responsive layout at 320–430px, add floating social links, and verify all target widths
 - [x] Add and verify a full-screen zoomable image viewer across all meaningful site imagery
+- [x] Apply the uploaded official logo and matching favicon
+- [x] Organize existing content into separate pages with shared navigation and footer
+- [x] Verify direct page visits, mobile layout, image viewing, and company WhatsApp forms

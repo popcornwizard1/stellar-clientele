@@ -1,4 +1,5 @@
 import heroImg from "@/assets/hero-estate.jpg";
+import { Link } from "@tanstack/react-router";
 import { openSalesWhatsApps, waLink } from "@/data/dala";
 
 const stats = [
@@ -46,9 +47,9 @@ export function Hero() {
             >
               Get the price list
             </a>
-            <a href="#estates" className="btn-base btn-outline-light">
+            <Link to="/products" className="btn-base btn-outline-light">
               View available estates
-            </a>
+            </Link>
           </div>
 
           <dl className="mt-12 grid max-w-xl grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
