@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "../../../public/images/dala-logo.jpg.asset.json";
+import logo from "@/assets/dala-logo.jpg.asset.json";
 
 export function BrandLogo() {
   return <Link to="/" aria-label="Dala Real Estate homepage" className="flex shrink-0 items-center gap-2 sm:gap-3">

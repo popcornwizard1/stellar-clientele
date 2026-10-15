@@ -14,4 +14,4 @@
 - Route meaningful content imagery through the shared image lightbox; keep decorative full-bleed backgrounds outside it.
 - Mount the header, footer, and floating contact/social controls once in the root layout so every content page has consistent navigation.
 - Use leaf routes for Home, About, Estates/Services, Gallery, Payment, FAQs, and Contact; reuse existing section components to preserve content and interactions.
-- Store the official logo through a CDN pointer under public/images and derive the local favicon from that same uploaded image so branding stays consistent.
+- Store the official logo through a CDN pointer under src/assets and derive the local favicon from that same uploaded image so branding stays consistent and Vite can import the pointer.
