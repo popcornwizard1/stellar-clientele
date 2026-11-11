@@ -32,7 +32,7 @@ export function ScrollEffects() {
       .filter(el => !el.closest("#top") && !el.closest('[role="dialog"]')&& !el.closest("[data-state], details") && !el.dataset["reveal"]);
     const vh = window.innerHeight;
     const io = new IntersectionObserver(entries => {
-      for (const e of entries) if (e.isIntersecting) { e.target.classList.add("reveal-in"); io.unobserve(e.target); }
+      for (const e of entries) if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add("reveal-in"); io.unobserve(e.target); }
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     for (const el of els) {
       if (el.getBoundingClientRect().top < vh) { el.dataset["reveal"] = ""; el.classList.add("reveal-in"); continue; }
