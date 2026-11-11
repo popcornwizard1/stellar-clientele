@@ -16,6 +16,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { FloatingSocials } from "@/components/site/FloatingSocials";
 import { FloatingActions } from "@/components/site/FloatingActions";
+import { ScrollReveal } from "@/components/site/ScrollReveal";
 
 function NotFoundComponent() {
   return (
@@ -144,6 +145,7 @@ function RootComponent() {
       <Footer />
       <FloatingSocials />
       <FloatingActions />
+      <ScrollReveal />
     </QueryClientProvider>
   );
 }
