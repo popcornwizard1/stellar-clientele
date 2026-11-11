@@ -29,7 +29,7 @@ export function ScrollEffects() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     document.documentElement.classList.add("js-reveal");
     const els = Array.from(document.querySelectorAll<HTMLElement>(SELECTOR))
-      .filter(el => !el.closest("#top") && !el.closest('[role="dialog"]')&& !el.closest("[data-state]") && !el.dataset["reveal"]);
+      .filter(el => !el.closest("#top") && !el.closest('[role="dialog"]')&& !el.closest("[data-state], details") && !el.dataset["reveal"]);
     const vh = window.innerHeight;
     const io = new IntersectionObserver(entries => {
       for (const e of entries) if (e.isIntersecting) { e.target.classList.add("reveal-in"); io.unobserve(e.target); }
